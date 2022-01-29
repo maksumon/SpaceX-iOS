@@ -6,19 +6,40 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    private let viewModel = LaunchViewModel()
+class ViewController: UIViewController {
+    private var viewModel: LaunchViewModel!
+    private let disposeBag = DisposeBag()
     private var rocketId = ""
     
     @IBOutlet weak var segmentedControlYear: UISegmentedControl!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        viewModel.fetchLaunches()
-        self.updateUI()
+        viewModel = LaunchViewModel()
+        viewModel.launches.drive(onNext: {[unowned self] (_) in
+            self.activityIndicator.stopAnimating()
+            viewModel.selectedYear = self.segmentedControlYear.titleForSegment(at: self.segmentedControlYear.selectedSegmentIndex)!
+            self.updateUI()
+        }).disposed(by: disposeBag)
+        viewModel
+            .isFetching
+            .drive(onNext: {[unowned self] (_) in
+                self.activityIndicator.startAnimating()
+            })
+            .disposed(by: disposeBag)
+        viewModel
+          .error
+          .drive(onNext: {[unowned self] (error) in
+              if error != nil {
+                  self.showErrorAlert(with: error!)
+              }
+           }).disposed(by: disposeBag)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -28,25 +49,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.launches.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LaunchTableViewCell", for: indexPath) as! LaunchTableViewCell
-        cell.lblDate.text = viewModel.launches[indexPath.row].dateUTC!
-        cell.lblLaunchNumber.text = viewModel.launches[indexPath.row].launchpad!
-        cell.lblDescription.text = viewModel.launches[indexPath.row].details!
-
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        self.rocketId = viewModel.launches[indexPath.row].rocket!
-        
-        performSegue(withIdentifier: "segueRocketDetail", sender: self)
+    @IBAction func onSegmentedIndexChange(_ sender: Any) {
+        viewModel.selectedYear = self.segmentedControlYear.titleForSegment(at: self.segmentedControlYear.selectedSegmentIndex)!
+        self.updateUI()
     }
     
     private func updateUI() {
@@ -59,6 +64,35 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
     }
-
 }
 
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.numberOfLaunches
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LaunchTableViewCell", for: indexPath) as! LaunchTableViewCell
+        let launch = viewModel.currentLaunch(at: indexPath.row)
+        
+        cell.lblDate.text = launch?.dateUTC
+        cell.lblLaunchNumber.text = launch?.launchpad
+        cell.lblDescription.text = launch?.details
+
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let launch = viewModel.currentLaunch(at: indexPath.row)
+        
+        self.rocketId = (launch?.rocket!)!
+        
+        performSegue(withIdentifier: "segueRocketDetail", sender: self)
+    }
+}
