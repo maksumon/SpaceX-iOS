@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		047D51C1FE3840D2CBAADC43 /* Pods_SpaceX_SpaceXUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2A6585516D302D463C124A /* Pods_SpaceX_SpaceXUITests.framework */; };
 		9F93BB9727A462BF00C16628 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F93BB9627A462BF00C16628 /* AppDelegate.swift */; };
 		9F93BB9927A462BF00C16628 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F93BB9827A462BF00C16628 /* SceneDelegate.swift */; };
 		9F93BB9B27A462BF00C16628 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F93BB9A27A462BF00C16628 /* ViewController.swift */; };
@@ -24,6 +25,8 @@
 		9FF56F6A27A532A100E4BAEC /* RocketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF56F6927A532A100E4BAEC /* RocketViewModel.swift */; };
 		9FF56F7D27A58D7F00E4BAEC /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF56F7C27A58D7F00E4BAEC /* API.swift */; };
 		9FF56F7F27A58E1B00E4BAEC /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF56F7E27A58E1B00E4BAEC /* APIHelper.swift */; };
+		D7A863BC4534DBAF481B6C5B /* Pods_SpaceXTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB03B1BB4BF36FCD2122FFB /* Pods_SpaceXTests.framework */; };
+		E4C627DCD4095DECFD64E699 /* Pods_SpaceX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC65A6B82676D27FED2E6CF /* Pods_SpaceX.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E2A6585516D302D463C124A /* Pods_SpaceX_SpaceXUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceX_SpaceXUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		657DC2CC452106D3A434093F /* Pods-SpaceX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceX.debug.xcconfig"; path = "Target Support Files/Pods-SpaceX/Pods-SpaceX.debug.xcconfig"; sourceTree = "<group>"; };
+		71F179095E23BC67C04BC11B /* Pods-SpaceXTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXTests.debug.xcconfig"; path = "Target Support Files/Pods-SpaceXTests/Pods-SpaceXTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7CAD8CCBD25A93C46267C0DA /* Pods-SpaceX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceX.release.xcconfig"; path = "Target Support Files/Pods-SpaceX/Pods-SpaceX.release.xcconfig"; sourceTree = "<group>"; };
+		82A85C3C5E510C73E0C34267 /* Pods-SpaceX-SpaceXUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceX-SpaceXUITests.release.xcconfig"; path = "Target Support Files/Pods-SpaceX-SpaceXUITests/Pods-SpaceX-SpaceXUITests.release.xcconfig"; sourceTree = "<group>"; };
+		92B21BBA4F463876811C1C2D /* Pods-SpaceXTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXTests.release.xcconfig"; path = "Target Support Files/Pods-SpaceXTests/Pods-SpaceXTests.release.xcconfig"; sourceTree = "<group>"; };
 		9F93BB9327A462BF00C16628 /* SpaceX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F93BB9627A462BF00C16628 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F93BB9827A462BF00C16628 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +74,9 @@
 		9FF56F6927A532A100E4BAEC /* RocketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketViewModel.swift; sourceTree = "<group>"; };
 		9FF56F7C27A58D7F00E4BAEC /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		9FF56F7E27A58E1B00E4BAEC /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
+		B3DCD4E230DF5D399FB43677 /* Pods-SpaceX-SpaceXUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceX-SpaceXUITests.debug.xcconfig"; path = "Target Support Files/Pods-SpaceX-SpaceXUITests/Pods-SpaceX-SpaceXUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CCC65A6B82676D27FED2E6CF /* Pods_SpaceX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAB03B1BB4BF36FCD2122FFB /* Pods_SpaceXTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceXTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4C627DCD4095DECFD64E699 /* Pods_SpaceX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7A863BC4534DBAF481B6C5B /* Pods_SpaceXTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,12 +100,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047D51C1FE3840D2CBAADC43 /* Pods_SpaceX_SpaceXUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		889DAA5826886AFA0017F90C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCC65A6B82676D27FED2E6CF /* Pods_SpaceX.framework */,
+				3E2A6585516D302D463C124A /* Pods_SpaceX_SpaceXUITests.framework */,
+				DAB03B1BB4BF36FCD2122FFB /* Pods_SpaceXTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9F93BB8A27A462BF00C16628 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +124,8 @@
 				9F93BBAC27A462C300C16628 /* SpaceXTests */,
 				9F93BBB627A462C300C16628 /* SpaceXUITests */,
 				9F93BB9427A462BF00C16628 /* Products */,
+				BA5540CC99B084757A775FE1 /* Pods */,
+				889DAA5826886AFA0017F90C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -191,6 +218,20 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		BA5540CC99B084757A775FE1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				657DC2CC452106D3A434093F /* Pods-SpaceX.debug.xcconfig */,
+				7CAD8CCBD25A93C46267C0DA /* Pods-SpaceX.release.xcconfig */,
+				B3DCD4E230DF5D399FB43677 /* Pods-SpaceX-SpaceXUITests.debug.xcconfig */,
+				82A85C3C5E510C73E0C34267 /* Pods-SpaceX-SpaceXUITests.release.xcconfig */,
+				71F179095E23BC67C04BC11B /* Pods-SpaceXTests.debug.xcconfig */,
+				92B21BBA4F463876811C1C2D /* Pods-SpaceXTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -198,9 +239,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F93BBBD27A462C300C16628 /* Build configuration list for PBXNativeTarget "SpaceX" */;
 			buildPhases = (
+				5547EBC12AFC4341DBB10F2D /* [CP] Check Pods Manifest.lock */,
 				9F93BB8F27A462BF00C16628 /* Sources */,
 				9F93BB9027A462BF00C16628 /* Frameworks */,
 				9F93BB9127A462BF00C16628 /* Resources */,
+				19418D2711FE05DBD99F8771 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -215,6 +258,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F93BBC027A462C300C16628 /* Build configuration list for PBXNativeTarget "SpaceXTests" */;
 			buildPhases = (
+				193B2511957113F40FED155A /* [CP] Check Pods Manifest.lock */,
 				9F93BBA527A462C300C16628 /* Sources */,
 				9F93BBA627A462C300C16628 /* Frameworks */,
 				9F93BBA727A462C300C16628 /* Resources */,
@@ -233,9 +277,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F93BBC327A462C300C16628 /* Build configuration list for PBXNativeTarget "SpaceXUITests" */;
 			buildPhases = (
+				36944595A898016D07C4E735 /* [CP] Check Pods Manifest.lock */,
 				9F93BBAF27A462C300C16628 /* Sources */,
 				9F93BBB027A462C300C16628 /* Frameworks */,
 				9F93BBB127A462C300C16628 /* Resources */,
+				820F54554DFED00215AF1AAF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -316,6 +362,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		193B2511957113F40FED155A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpaceXTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		19418D2711FE05DBD99F8771 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpaceX/Pods-SpaceX-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpaceX/Pods-SpaceX-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpaceX/Pods-SpaceX-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36944595A898016D07C4E735 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpaceX-SpaceXUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5547EBC12AFC4341DBB10F2D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpaceX-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		820F54554DFED00215AF1AAF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpaceX-SpaceXUITests/Pods-SpaceX-SpaceXUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpaceX-SpaceXUITests/Pods-SpaceX-SpaceXUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpaceX-SpaceXUITests/Pods-SpaceX-SpaceXUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9F93BB8F27A462BF00C16628 /* Sources */ = {
@@ -506,6 +655,7 @@
 		};
 		9F93BBBE27A462C300C16628 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 657DC2CC452106D3A434093F /* Pods-SpaceX.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -533,6 +683,7 @@
 		};
 		9F93BBBF27A462C300C16628 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CAD8CCBD25A93C46267C0DA /* Pods-SpaceX.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -560,6 +711,7 @@
 		};
 		9F93BBC127A462C300C16628 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71F179095E23BC67C04BC11B /* Pods-SpaceXTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -579,6 +731,7 @@
 		};
 		9F93BBC227A462C300C16628 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92B21BBA4F463876811C1C2D /* Pods-SpaceXTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -598,6 +751,7 @@
 		};
 		9F93BBC427A462C300C16628 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3DCD4E230DF5D399FB43677 /* Pods-SpaceX-SpaceXUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -615,6 +769,7 @@
 		};
 		9F93BBC527A462C300C16628 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82A85C3C5E510C73E0C34267 /* Pods-SpaceX-SpaceXUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
