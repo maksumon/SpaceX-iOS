@@ -37,6 +37,7 @@ class MainViewController: UIViewController {
             .isFetching
             .drive(onNext: {[unowned self] (_) in
                 self.activityIndicator.startAnimating()
+                self.segmentedControlYear.isEnabled = false
             })
             .disposed(by: disposeBag)
         viewModel
@@ -63,6 +64,7 @@ class MainViewController: UIViewController {
     
     private func updateUI() {
         self.activityIndicator.stopAnimating()
+        self.segmentedControlYear.isEnabled = true
         tableView.reloadData()
     }
 }
