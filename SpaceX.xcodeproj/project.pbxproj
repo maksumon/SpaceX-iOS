@@ -25,6 +25,7 @@
 		9FF56F6A27A532A100E4BAEC /* RocketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF56F6927A532A100E4BAEC /* RocketViewModel.swift */; };
 		9FF56F7D27A58D7F00E4BAEC /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF56F7C27A58D7F00E4BAEC /* API.swift */; };
 		9FF56F7F27A58E1B00E4BAEC /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF56F7E27A58E1B00E4BAEC /* APIHelper.swift */; };
+		9FF56F8227A6451100E4BAEC /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF56F8127A6451100E4BAEC /* StringExtension.swift */; };
 		D7A863BC4534DBAF481B6C5B /* Pods_SpaceXTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB03B1BB4BF36FCD2122FFB /* Pods_SpaceXTests.framework */; };
 		E4C627DCD4095DECFD64E699 /* Pods_SpaceX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC65A6B82676D27FED2E6CF /* Pods_SpaceX.framework */; };
 /* End PBXBuildFile section */
@@ -74,6 +75,7 @@
 		9FF56F6927A532A100E4BAEC /* RocketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketViewModel.swift; sourceTree = "<group>"; };
 		9FF56F7C27A58D7F00E4BAEC /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		9FF56F7E27A58E1B00E4BAEC /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
+		9FF56F8127A6451100E4BAEC /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		B3DCD4E230DF5D399FB43677 /* Pods-SpaceX-SpaceXUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceX-SpaceXUITests.debug.xcconfig"; path = "Target Support Files/Pods-SpaceX-SpaceXUITests/Pods-SpaceX-SpaceXUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CCC65A6B82676D27FED2E6CF /* Pods_SpaceX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB03B1BB4BF36FCD2122FFB /* Pods_SpaceXTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceXTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +144,7 @@
 		9F93BB9527A462BF00C16628 /* SpaceX */ = {
 			isa = PBXGroup;
 			children = (
+				9FF56F8027A644FF00E4BAEC /* Extensions */,
 				9FF56F7B27A58D6900E4BAEC /* Constants */,
 				9FF56F6B27A542D300E4BAEC /* Helpers */,
 				9FF56F6227A52EDD00E4BAEC /* Models */,
@@ -218,6 +221,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		9FF56F8027A644FF00E4BAEC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9FF56F8127A6451100E4BAEC /* StringExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		BA5540CC99B084757A775FE1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,7 +239,6 @@
 				71F179095E23BC67C04BC11B /* Pods-SpaceXTests.debug.xcconfig */,
 				92B21BBA4F463876811C1C2D /* Pods-SpaceXTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -479,6 +489,7 @@
 				9FF56F6A27A532A100E4BAEC /* RocketViewModel.swift in Sources */,
 				9F93BB9927A462BF00C16628 /* SceneDelegate.swift in Sources */,
 				9F9EFE3F27A52467004A1DE6 /* DetailViewController.swift in Sources */,
+				9FF56F8227A6451100E4BAEC /* StringExtension.swift in Sources */,
 				9FF56F6427A5317500E4BAEC /* Launch.swift in Sources */,
 				9FF56F7F27A58E1B00E4BAEC /* APIHelper.swift in Sources */,
 				9FF56F6827A5329100E4BAEC /* LaunchViewModel.swift in Sources */,
