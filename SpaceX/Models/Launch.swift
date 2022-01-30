@@ -8,6 +8,7 @@
 import Foundation
 
 struct Launch: Codable {
+    let links: Links?
     let rocket: String?
     let success: Bool?
     let details, launchpad, name, dateUTC: String?
@@ -15,12 +16,18 @@ struct Launch: Codable {
     let id: String?
 
     enum CodingKeys: String, CodingKey {
-        case rocket, success, details, launchpad, name
+        case links, rocket, success, details, launchpad, name
         case dateUTC = "date_utc"
         case upcoming, id
     }
 }
 
-struct LaunchResponse: Codable {
-    var launches: [Launch]
+// MARK: - Links
+struct Links: Codable {
+    let patch: Patch
+}
+
+// MARK: - Patch
+struct Patch: Codable {
+    let small, large: String?
 }
