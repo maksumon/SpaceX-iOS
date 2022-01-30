@@ -33,19 +33,22 @@ class RocketViewModel {
         return _error.value != nil
     }
     
-    init() {
-        self.fetchRocket()
+    func getRocket() -> Rocket? {
+        return _rocket.value ?? nil
     }
     
-    func fetchRocket() {
-        self._rocket.accept(nil)
+    init(rocketId: String) {
+        self.fetchRocket(rocketId: rocketId)
+    }
+    
+    func fetchRocket(rocketId: String) {
         self._isFetching.accept(true)
         self._error.accept(nil)
         
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = API.BASE_URL
-        urlComponents.path = "\(API.API_VERSION)\(API.ROCKET_ENDPOINT)"
+        urlComponents.path = "\(API.API_VERSION)\(API.ROCKET_ENDPOINT)/\(rocketId)"
 
         debugPrint("API URL: \(String(describing: urlComponents.url))")
 
