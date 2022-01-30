@@ -37,6 +37,7 @@ class ViewController: UIViewController {
           .error
           .drive(onNext: {[unowned self] (error) in
               if error != nil {
+                  self.activityIndicator.stopAnimating()
                   self.showErrorAlert(with: error!)
               }
            }).disposed(by: disposeBag)
