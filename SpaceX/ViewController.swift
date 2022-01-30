@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Kingfisher
 
 class ViewController: UIViewController {
     private var viewModel: LaunchViewModel!
@@ -21,6 +22,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
         viewModel = LaunchViewModel()
         viewModel.launches.drive(onNext: {[unowned self] (_) in
             self.activityIndicator.stopAnimating()
@@ -76,9 +78,16 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LaunchTableViewCell", for: indexPath) as! LaunchTableViewCell
         let launch = viewModel.currentLaunch(at: indexPath.row)
         
-        cell.lblDate.text = launch?.dateUTC?.formatISODateTime()
+        cell.lblDate.text = launch?.dateUTC?.formattedISODateTime
         cell.lblLaunchNumber.text = launch?.launchpad
         cell.lblDescription.text = launch?.details
+        cell.imageViewIcon.kf.setImage(
+            with: URL(string: launch?.links?.patch.small ?? ""),
+            placeholder: UIImage(named: "Placeholder"),
+            options: nil,
+            progressBlock: nil,
+            completionHandler: nil
+        )
 
         return cell
     }
