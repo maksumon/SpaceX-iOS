@@ -8,10 +8,8 @@
 import Foundation
 
 struct Rocket: Codable {
-    let flickrImages: [String]
-    let name: String
-    let wikipedia: String
-    let details, id: String
+    let flickrImages: [String]?
+    let name, wikipedia, details, id: String?
 
     enum CodingKeys: String, CodingKey {
         case flickrImages = "flickr_images"
