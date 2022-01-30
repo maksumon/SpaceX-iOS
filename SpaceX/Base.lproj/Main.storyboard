@@ -133,7 +133,7 @@
         <!--Rocket Detail-->
         <scene sceneID="N7U-6B-8fF">
             <objects>
-                <viewController id="peV-sL-qlw" customClass="DetailViewController" customModule="SpaceX" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="peV-sL-qlw" customClass="RocketViewController" customModule="SpaceX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="boO-X9-Ni5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

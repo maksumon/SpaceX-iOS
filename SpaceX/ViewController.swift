@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueRocketDetail" {
-            guard let detailVC = segue.destination as? DetailViewController else { return }
+            guard let detailVC = segue.destination as? RocketViewController else { return }
             detailVC.rocketId = self.rocketId
         }
     }

@@ -17,7 +17,7 @@
 		9F93BBAE27A462C300C16628 /* SpaceXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F93BBAD27A462C300C16628 /* SpaceXTests.swift */; };
 		9F93BBB827A462C300C16628 /* SpaceXUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F93BBB727A462C300C16628 /* SpaceXUITests.swift */; };
 		9F93BBBA27A462C300C16628 /* SpaceXUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F93BBB927A462C300C16628 /* SpaceXUITestsLaunchTests.swift */; };
-		9F9EFE3F27A52467004A1DE6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EFE3E27A52467004A1DE6 /* DetailViewController.swift */; };
+		9F9EFE3F27A52467004A1DE6 /* RocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EFE3E27A52467004A1DE6 /* RocketViewController.swift */; };
 		9FF56F6027A52B9D00E4BAEC /* LaunchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF56F5F27A52B9D00E4BAEC /* LaunchTableViewCell.swift */; };
 		9FF56F6427A5317500E4BAEC /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF56F6327A5317500E4BAEC /* Launch.swift */; };
 		9FF56F6627A531A900E4BAEC /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF56F6527A531A900E4BAEC /* Rocket.swift */; };
@@ -67,7 +67,7 @@
 		9F93BBB327A462C300C16628 /* SpaceXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F93BBB727A462C300C16628 /* SpaceXUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXUITests.swift; sourceTree = "<group>"; };
 		9F93BBB927A462C300C16628 /* SpaceXUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		9F9EFE3E27A52467004A1DE6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9F9EFE3E27A52467004A1DE6 /* RocketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketViewController.swift; sourceTree = "<group>"; };
 		9FF56F5F27A52B9D00E4BAEC /* LaunchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchTableViewCell.swift; sourceTree = "<group>"; };
 		9FF56F6327A5317500E4BAEC /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
 		9FF56F6527A531A900E4BAEC /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 				9F93BB9627A462BF00C16628 /* AppDelegate.swift */,
 				9F93BB9827A462BF00C16628 /* SceneDelegate.swift */,
 				9F93BB9A27A462BF00C16628 /* ViewController.swift */,
-				9F9EFE3E27A52467004A1DE6 /* DetailViewController.swift */,
+				9F9EFE3E27A52467004A1DE6 /* RocketViewController.swift */,
 				9F93BB9C27A462BF00C16628 /* Main.storyboard */,
 				9F93BB9F27A462C200C16628 /* Assets.xcassets */,
 				9F93BBA127A462C200C16628 /* LaunchScreen.storyboard */,
@@ -488,7 +488,7 @@
 				9FF56F7D27A58D7F00E4BAEC /* API.swift in Sources */,
 				9FF56F6A27A532A100E4BAEC /* RocketViewModel.swift in Sources */,
 				9F93BB9927A462BF00C16628 /* SceneDelegate.swift in Sources */,
-				9F9EFE3F27A52467004A1DE6 /* DetailViewController.swift in Sources */,
+				9F9EFE3F27A52467004A1DE6 /* RocketViewController.swift in Sources */,
 				9FF56F8227A6451100E4BAEC /* StringExtension.swift in Sources */,
 				9FF56F6427A5317500E4BAEC /* Launch.swift in Sources */,
 				9FF56F7F27A58E1B00E4BAEC /* APIHelper.swift in Sources */,

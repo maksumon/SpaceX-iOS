@@ -1,5 +1,5 @@
 //
-//  DetailViewController.swift
+//  RocketViewController.swift
 //  SpaceX
 //
 //  Created by Mohammad Ashraful Kabir on 29/01/2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class RocketViewController: UIViewController {
 
     var rocketId: String?
     
