@@ -24,11 +24,15 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         viewModel = LaunchViewModel()
-        viewModel.launches.drive(onNext: {[unowned self] (_) in
-            self.activityIndicator.stopAnimating()
-            viewModel.selectedYear = self.segmentedControlYear.titleForSegment(at: self.segmentedControlYear.selectedSegmentIndex)!
-            self.updateUI()
-        }).disposed(by: disposeBag)
+        viewModel
+            .launches
+            .drive(onNext: {[unowned self] (_) in
+                viewModel.selectedYear = self.segmentedControlYear.titleForSegment(
+                    at: self.segmentedControlYear.selectedSegmentIndex
+                )!
+                self.updateUI()
+            })
+            .disposed(by: disposeBag)
         viewModel
             .isFetching
             .drive(onNext: {[unowned self] (_) in
@@ -40,7 +44,7 @@ class ViewController: UIViewController {
           .drive(onNext: {[unowned self] (error) in
               if error != nil {
                   self.activityIndicator.stopAnimating()
-                  self.showErrorAlert(with: error!)
+                  Utils.showErrorAlert(at: self, with: error!)
               }
            }).disposed(by: disposeBag)
     }
@@ -58,14 +62,8 @@ class ViewController: UIViewController {
     }
     
     private func updateUI() {
+        self.activityIndicator.stopAnimating()
         tableView.reloadData()
-    }
-    
-    private func showErrorAlert(with message: String) {
-        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        alert.addAction(okAction)
-        present(alert, animated: true, completion: nil)
     }
 }
 
