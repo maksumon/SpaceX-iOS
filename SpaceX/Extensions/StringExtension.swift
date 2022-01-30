@@ -8,7 +8,7 @@
 import Foundation
 
 extension String {
-    func formatISODateTime() -> String {
+    var formattedISODateTime: String {
         var formattedDateTime = self
         let isoDateFormatter = ISO8601DateFormatter()
         isoDateFormatter.formatOptions =  [.withInternetDateTime, .withFractionalSeconds]
