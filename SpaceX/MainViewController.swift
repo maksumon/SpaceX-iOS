@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  SpaceX
 //
 //  Created by Mohammad Ashraful Kabir on 29/01/2022.
@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 import Kingfisher
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     private var viewModel: LaunchViewModel!
     private let disposeBag = DisposeBag()
     private var rocketId = ""
@@ -67,7 +67,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfLaunches
     }
