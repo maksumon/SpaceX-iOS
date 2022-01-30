@@ -76,7 +76,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LaunchTableViewCell", for: indexPath) as! LaunchTableViewCell
         let launch = viewModel.currentLaunch(at: indexPath.row)
         
-        cell.lblDate.text = launch?.dateUTC
+        cell.lblDate.text = launch?.dateUTC?.formatISODateTime()
         cell.lblLaunchNumber.text = launch?.launchpad
         cell.lblDescription.text = launch?.details
 
