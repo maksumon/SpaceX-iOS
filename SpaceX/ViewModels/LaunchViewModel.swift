@@ -22,7 +22,13 @@ class LaunchViewModel : ObservableObject {
     
     var selectedYear = "" {
         didSet {
-            filteredLaunches = _launches.value.filter { $0.dateUTC!.contains(selectedYear) }
+            filteredLaunches = _launches.value.filter({
+                $0.dateUTC!.contains(selectedYear)
+                && (
+                    ($0.success == nil && $0.upcoming == true)
+                    || ($0.success == true && $0.upcoming == false)
+                )
+            })
         }
     }
     
