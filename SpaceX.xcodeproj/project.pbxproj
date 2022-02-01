@@ -17,7 +17,14 @@
 		9F93BBAE27A462C300C16628 /* SpaceXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F93BBAD27A462C300C16628 /* SpaceXTests.swift */; };
 		9F93BBB827A462C300C16628 /* SpaceXUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F93BBB727A462C300C16628 /* SpaceXUITests.swift */; };
 		9F93BBBA27A462C300C16628 /* SpaceXUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F93BBB927A462C300C16628 /* SpaceXUITestsLaunchTests.swift */; };
+		9F983B0C27A9B391000CB167 /* RocketTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F983B0B27A9B391000CB167 /* RocketTest.swift */; };
 		9F9EFE3F27A52467004A1DE6 /* RocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EFE3E27A52467004A1DE6 /* RocketViewController.swift */; };
+		9FEE1C5D27A9972C00EE0EB1 /* LaunchTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE1C5C27A9972C00EE0EB1 /* LaunchTest.swift */; };
+		9FEE1C5E27A9995600EE0EB1 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF56F8127A6451100E4BAEC /* StringExtension.swift */; };
+		9FEE1C5F27A9995B00EE0EB1 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF56F7C27A58D7F00E4BAEC /* API.swift */; };
+		9FEE1C6027A9995F00EE0EB1 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF56F7E27A58E1B00E4BAEC /* APIHelper.swift */; };
+		9FEE1C6127A9996500EE0EB1 /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF56F6327A5317500E4BAEC /* Launch.swift */; };
+		9FEE1C6227A9996800EE0EB1 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF56F6527A531A900E4BAEC /* Rocket.swift */; };
 		9FF56F6027A52B9D00E4BAEC /* LaunchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF56F5F27A52B9D00E4BAEC /* LaunchTableViewCell.swift */; };
 		9FF56F6427A5317500E4BAEC /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF56F6327A5317500E4BAEC /* Launch.swift */; };
 		9FF56F6627A531A900E4BAEC /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF56F6527A531A900E4BAEC /* Rocket.swift */; };
@@ -68,7 +75,9 @@
 		9F93BBB327A462C300C16628 /* SpaceXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F93BBB727A462C300C16628 /* SpaceXUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXUITests.swift; sourceTree = "<group>"; };
 		9F93BBB927A462C300C16628 /* SpaceXUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9F983B0B27A9B391000CB167 /* RocketTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketTest.swift; sourceTree = "<group>"; };
 		9F9EFE3E27A52467004A1DE6 /* RocketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketViewController.swift; sourceTree = "<group>"; };
+		9FEE1C5C27A9972C00EE0EB1 /* LaunchTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchTest.swift; sourceTree = "<group>"; };
 		9FF56F5F27A52B9D00E4BAEC /* LaunchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchTableViewCell.swift; sourceTree = "<group>"; };
 		9FF56F6327A5317500E4BAEC /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
 		9FF56F6527A531A900E4BAEC /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
@@ -169,6 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				9F93BBAD27A462C300C16628 /* SpaceXTests.swift */,
+				9FEE1C5C27A9972C00EE0EB1 /* LaunchTest.swift */,
+				9F983B0B27A9B391000CB167 /* RocketTest.swift */,
 			);
 			path = SpaceXTests;
 			sourceTree = "<group>";
@@ -283,6 +294,7 @@
 				9F93BBA527A462C300C16628 /* Sources */,
 				9F93BBA627A462C300C16628 /* Frameworks */,
 				9F93BBA727A462C300C16628 /* Resources */,
+				56E9ADABD6E940767D610AD0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -468,6 +480,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		56E9ADABD6E940767D610AD0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpaceXTests/Pods-SpaceXTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpaceXTests/Pods-SpaceXTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpaceXTests/Pods-SpaceXTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		820F54554DFED00215AF1AAF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -512,7 +541,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FEE1C6227A9996800EE0EB1 /* Rocket.swift in Sources */,
+				9FEE1C5D27A9972C00EE0EB1 /* LaunchTest.swift in Sources */,
 				9F93BBAE27A462C300C16628 /* SpaceXTests.swift in Sources */,
+				9F983B0C27A9B391000CB167 /* RocketTest.swift in Sources */,
+				9FEE1C5F27A9995B00EE0EB1 /* API.swift in Sources */,
+				9FEE1C6027A9995F00EE0EB1 /* APIHelper.swift in Sources */,
+				9FEE1C6127A9996500EE0EB1 /* Launch.swift in Sources */,
+				9FEE1C5E27A9995600EE0EB1 /* StringExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
