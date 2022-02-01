@@ -82,10 +82,10 @@ class LaunchViewModel : ObservableObject {
                 self._isFetching.accept(false)
                 self._launches.accept(launches)
             case .failure(let error):
-                debugPrint("We got a failure trying to get the weather. The error we got was: \(error.localizedDescription)")
+                debugPrint("We got a failure trying to get the launches. The error we got was: \(error.localizedDescription)")
                 self._isFetching.accept(false)
                 self._error.accept(error.localizedDescription)
             }
-         }
+        }
     }
 }

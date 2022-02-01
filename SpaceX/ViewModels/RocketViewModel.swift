@@ -59,10 +59,10 @@ class RocketViewModel {
                 self._isFetching.accept(false)
                 self._rocket.accept(rocket)
             case .failure(let error):
-                debugPrint("We got a failure trying to get the weather. The error we got was: \(error.localizedDescription)")
+                debugPrint("We got a failure trying to get the rocket. The error we got was: \(error.localizedDescription)")
                 self._isFetching.accept(false)
                 self._error.accept(error.localizedDescription)
             }
-         }
+        }
     }
 }
